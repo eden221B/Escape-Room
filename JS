@@ -1,0 +1,196 @@
+var haskey = false;
+var keylock = "locked";
+var lock = "locked"; 
+
+function tryLock()
+{
+    var locktry = prompt ("Neferiti, the high priestess of the temple, beckoned for the code, her eyes reflecting both the weight of the knowledge sought and the mysteries yet to unfold.");
+    if(locktry == 1618221)
+    {
+        lock = "unlocked";
+        alert("The ankh dissapeared, having fulfilled her duty bestowed on her since her inception. With a clatter, a key fell where u stood.");
+        document.getElementById("lock").style.display = "none"; 
+        document.getElementById("key").style.display = "block";
+        checks();
+    }
+    else
+    {
+        alert("Neferiti stood high atop the veil with an air of expectation, yet, the chamber remained cloaked.");
+    }
+}
+function tryKeylock()
+{
+    if(haskey == true)
+    {
+        keylock = "unlocked";
+        alert("With a vociferous thud, the ancient door came cascading down. Beyond lay a passage , the whispers of age-old mysteries seeping through its tattered walls. ");
+        document.getElementById("keylock").style.visibility="hidden"
+        checks();
+    }
+    else
+    {
+        alert("The time slips by but nothing happens");
+    }
+}
+function pickupkey()
+{
+    haskey = true;
+    alert("Crouching, you picked up the key");
+    document.getElementById("key").style.display="none";
+}
+function checks()
+{
+    if(keylock == "unlocked")
+    {
+        if(lock == "unlocked")
+        {
+            document.getElementById("escape").style.visibility="visible";
+            document.getElementById("door").style.visibility="hidden";
+        }
+        else
+        {
+            alert("Time slips by , you stand intrigued, captivated by the murals and the hush of what lay beyond the door.");
+        }
+    }
+    else
+    {
+        alert("Time slips by , you stand intrigued, captivated by the murals and the hush of what lay beyond the door.");
+    }
+}
+function tryVault()
+{
+    var locktry = prompt ("You see a manuscript with historical symbols emblazoned on it.\uFF02The manuscript must be clue to open the vault\uFF02 , you decided.");
+    if(locktry == "sphinx" || locktry=="SPHINX")
+    {
+        lock = "unlocked";
+        alert("The vault dissipated into the air as if it never existed, leaving behind a dusty scroll with words of the wise inscribed on it. \uFF02This must be a clue to some other lock\uFF02, you decided.");
+        document.getElementById("vault").style.display = "none"; 
+    }
+    else
+    {
+        alert("Time slips by , you stand intrigued, captivated by the murals and the hush of what lay beyond the door.");
+    }
+}
+
+function trylock2()
+{
+    var locktry = prompt ("You eye the quaint papyrus. \uFF02Seems like some sort of ancient math puzzle\uFF02, you mused. You stared at the  humongous statue gilded with treasures of faded dynasties. \uFF02I need to solve the puzzle first.\uFF02");
+    if(locktry == 10)
+    {
+        lock = "unlocked";
+        alert("The gilded statue broke with a thundering clang, revealing another papyrus. \uFF02Something to do with those moving blocks\uFF02, you pondered.");
+        document.getElementById("anotherlock").style.display = "none"; 
+    }
+    else
+    {
+        alert("Time slips by , you stand intrigued, captivated by the murals and the hush of what lay beyond the door.");
+    }
+}
+function reveal()
+{
+    alert("\uFF02English letters and Heiroglyphics?\uFF02, you stared ,astonished. \uFF02Does it have something to do with the scroll with the riddle I found on the other wall?\uFF02")
+}
+function square()
+{
+    alert("You eyed the bizzare matrix of numbers.\uFF02Ancient egyptians were great mathematicians.Is that a magic square?They did believe it had magical powers\uFF02, you speculated.")
+}
+function code()
+{
+    alert("You eyed the manuscript.\uFF02Maybe the next room has some clues to this.\uFF02, you contemplated. ")
+}
+
+function tryNum1()
+{
+    var locktry = prompt ("\uFF02The mural seems to hide something\uFF02,you thought.There was a faint inscription on it, it read (1,1)");
+    if(locktry == 18)
+    {
+        lock = "unlocked";
+        document.getElementById("lost1").style.display = "none"; 
+    }
+    else
+    {
+        alert("Time slips by , you stand intrigued, captivated by the murals and the hush of what lay beyond the door.");
+    }
+}
+
+function tryNum2()
+{
+    var locktry = prompt ("\uFF02The mural seems to hide something\uFF02,you thought.There was a faint inscription on it, it read (3,2)");
+    if(locktry == 17)
+    {
+        lock = "unlocked";
+        document.getElementById("lost2").style.display = "none"; 
+    }
+    else
+    {
+        alert("Time slips by , you stand intrigued, captivated by the murals and the hush of what lay beyond the door.");
+    }
+}
+
+function tryNum3()
+{
+    var locktry = prompt ("\uFF02The mural seems to hide something\uFF02,you thought.There was a faint inscription on it, it read (4,4)");
+    if(locktry == 12)
+    {
+        lock = "unlocked";
+        document.getElementById("lost3").style.display = "none"; 
+    }
+    else
+    {
+        alert("Time slips by , you stand intrigued, captivated by the murals and the hush of what lay beyond the door.");
+    }
+}
+
+function tryNum4()
+{
+    var locktry = prompt ("\uFF02The mural seems to hide something\uFF02,you thought.There was a faint inscription on it, it read (5,3)");
+    if(locktry == 16)
+    {
+        lock = "unlocked";
+        document.getElementById("lost4").style.display = "none"; 
+    }
+    else
+    {
+        alert("Time slips by , you stand intrigued, captivated by the murals and the hush of what lay beyond the door.");
+    }
+}
+
+
+var currentRoom = 1;
+var totalRooms = 4; 
+
+function right() {
+    document.getElementById("room" + currentRoom).style.display = "none";
+    currentRoom++;
+    if (currentRoom > totalRooms) {
+        currentRoom = 1;
+    }
+    document.getElementById("room" + currentRoom).style.display = "block";
+    updateBackground(currentRoom);
+}
+
+function left() {
+    document.getElementById("room" + currentRoom).style.display = "none";
+    currentRoom--;
+    if (currentRoom < 1) {
+        currentRoom = totalRooms;
+    }
+    document.getElementById("room" + currentRoom).style.display = "block";
+    updateBackground(currentRoom);
+}
+
+function updateBackground(roomNumber) {
+    if (roomNumber === 1) {
+        document.body.style.backgroundImage = "url('room1.jpeg')"; 
+    } else if (roomNumber === 2) {
+        document.body.style.backgroundImage = "url('room2.jpeg')"; 
+    } else if (roomNumber === 3) {
+        document.body.style.backgroundImage = "url('room3.jpeg')"; 
+    }
+    else if (roomNumber === 4) {
+        document.body.style.backgroundImage = "url('room4.jpeg')"; 
+    }
+}
+
+    
+
