@@ -1,0 +1,286 @@
+nav
+{
+    padding: 10px;
+}
+.navi ul
+{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+.navi li
+{
+    display: inline;
+    margin-right: 20px;
+}
+a
+{
+    color: aliceblue;
+    font-family: fantasy;
+    text-decoration: none;
+}
+
+#room1
+{
+    margin:0;
+    padding:0;
+}
+#room1 > *
+{
+    position:absolute;
+}
+#door
+{
+    bottom: 100px;
+    left:620px;
+    width:170px;
+    height: 410px;
+    opacity: 90%;
+}
+#keylock
+{
+    bottom:220px;
+    left:592px;
+    width:50px;
+}
+#lock
+{
+    bottom:262px;
+    left:580px;
+    width:250px;
+    
+}
+#key
+{
+    left:799px;
+    bottom:82px;
+    width:40px;
+}
+#escape
+{
+    visibility: hidden;
+    width: 100px;
+    position: absolute;
+    left:655px;
+    top: 370px;
+}
+body
+{
+    background-image: url("room1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#right
+{
+    width: 60px;
+    position: absolute;
+    right: 80px;
+    bottom: 340px;
+}
+#left
+{
+    width: 60px;
+    position: absolute;
+    left: 80px;
+    bottom: 340px;
+}
+.letters
+{
+    position: absolute;
+    top: 550px;
+    width: 80px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 2.0s ease;
+    z-index: 10;
+}
+.boxes
+{
+    position: absolute;
+    top:550px;
+    width:80px;
+}
+.letters:hover
+{
+    transform: translateY(-90px);
+}
+
+#P
+{
+    left:600px;
+}
+#box1
+{
+    left:600px;
+}
+
+#O
+{
+    left:700px;
+}
+#box2
+{
+    left:700px;
+}
+
+#H2
+{
+    left:800px;
+}
+#box3
+{
+    left:800px;
+}
+
+#R
+{
+    left:900px;
+}
+#box4
+{
+    left:900px;
+}
+
+#A1
+{
+    left:1000px;
+}
+#box5
+{
+    left:1000px;
+}
+
+#H1
+{
+    left:1100px;
+}
+#box6
+{
+    left:1100px;
+}
+
+#A2
+{
+    left:1200px;
+}
+#box7
+{
+    left:1200px;
+}
+.Aten
+{
+    width: 400px;
+    position: absolute;
+    left:200px;
+}
+
+#vault
+{
+    top:160px;
+    z-index: 20;
+}
+#scroll
+{
+    top:255px;
+}
+#LostSymbol
+{
+    width:350px;
+    position: absolute;
+    top:280px;
+    right:280px;
+    opacity: 85%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.locks2
+{
+    position: absolute;
+    left:200px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#code
+{
+    
+    width:300px;
+}
+
+#anotherlock
+{
+    width:330px;
+    top:85px;
+}
+#symbols
+{
+    width:350px;
+    position: absolute;
+    left:750px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+#square
+{
+    width:380px;
+    position: absolute;
+    left:200px;
+    top:180px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5);
+}
+.lostlock
+{
+    position: absolute;
+    width:250px;
+    height: 200px;
+    z-index: 200;
+}
+.solutions
+{
+    position: absolute;
+    width:250px;
+    height: 200px;
+}
+
+#lost1
+{
+    left:660px;
+    top: 100px;
+}
+#sol1
+{
+    left:660px;
+    top: 100px;
+}
+
+#lost2
+{
+    left:970px;
+    top: 100px;
+    height: 250px;
+}
+#sol2
+{
+    left:970px;
+    top: 100px;
+}
+
+#lost3
+{
+    left:660px;
+    top: 380px;
+    height: 250px;
+}
+#sol3
+{
+    left:660px;
+    top: 380px;
+}
+
+#lost4
+{
+    left:970px;
+    top: 380px;
+}
+#sol4
+{
+    left:970px;
+    top: 380px;
+}
