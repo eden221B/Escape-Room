@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="room1.css">
+       <script src="room1.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul class="navi">
+                <li class="navi"><a href ="home.html">Home</a></li>
+                <li class="navi"><a href ="about.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <div id="room1">
+            <img id="left" src="circle-left-regular.svg" onclick="left()">
+            
+            <img id="door" src="door.jpeg">
+            <img id="lock" src="lock.png" onclick="tryLock()">
+            <img id="keylock" src="keylock.jpeg" onclick="tryKeylock()">
+            <img id="key" src="key.png" style="display: none;" onclick="pickupkey()">
+            <img id="escape" src="stone.png" onclick="window.location.href='excaped.html'">
+
+            <img id="right" src="circle-right-regular.svg" onclick="right()">
+        </div>
+        
+        <div id="room2" class="room" style="display: none;">
+            <img id="left" src="circle-left-regular.svg" onclick="left()">
+            
+            <img id="code" class="locks2" src="herioglyphics.jpeg" onclick="reveal()">
+            <img id="anotherlock" class="locks2" src="lock2.jpeg" onclick="trylock2()">
+            <img id="symbols" src="symbols.png">
+
+            <img class="letters" id="P" src="P.jpeg">
+            <img class="boxes" id="box1" src="b1.jpeg">
+            
+            <img class="letters" id="O" src="O.jpeg">
+            <img class="boxes" id="box2" src="b2.jpeg">
+            
+            <img class="letters" id="H2" src="H2.jpeg">
+            <img class="boxes" id="box3" src="b1.jpeg">
+
+            <img class="letters" id="R" src="R.jpeg">
+            <img class="boxes" id="box4" src="b3.jpeg">
+
+            <img class="letters" id="A1" src="A.jpeg">
+            <img class="boxes" id="box5" src="b1.jpeg">
+
+            <img class="letters" id="H1" src="H.jpeg">
+            <img class="boxes" id="box6" src="b4.jpeg">
+
+            <img class="letters" id="A2" src="A2.jpeg">
+            <img class="boxes" id="box7" src="b2.jpeg">
+
+            <img id="right" src="circle-right-regular.svg" onclick="right()">
+        </div>
+
+        <div id="room3" class="room" style="display: none;">
+            <img id="left" src="circle-left-regular.svg" onclick="left()">
+            
+            <img id="vault" class="Aten" src="vault.jpeg" onclick="tryVault()">
+            <img id="scroll" class="Aten" src="scroll.jpeg">
+            <img id="LostSymbol" src="sphinx.png" onclick="code()">
+            
+            <img id="right" src="circle-right-regular.svg" onclick="right()">
+        </div>
+
+        <div id="room4" class="room" style="display: none;">
+            <img id="left" src="circle-left-regular.svg" onclick="left()">
+            <img id="square" src="lastcode.jpeg" onclick="square()">
+
+            <img id="lost1" class="lostlock" src="ls1.jpeg" onclick="tryNum1()">
+            <img id="sol1" class="solutions" src="sol1.png">
+
+            <img id="lost2" class="lostlock" src="ls2.jpeg" onclick="tryNum2()">
+            <img id="sol2" class="solutions" src="sol2.png">
+
+            <img id="lost3" class="lostlock" src="ls3.jpeg" onclick="tryNum3()">
+            <img id="sol3" class="solutions" src="sol3.png">
+
+            <img id="lost4" class="lostlock" src="ls4.jpeg" onclick="tryNum4()">
+            <img id="sol4" class="solutions" src="sol4.png">
+
+            <img id="right" src="circle-right-regular.svg" onclick="right()">
+        </div>
+    </body>
+</html>
